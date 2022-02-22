@@ -36,8 +36,10 @@ enum RMRequest {
                     throw RMError.endpointBadRequest("The dictionary must not be empty")
                 }
                 for key in dictionary.keys {
+                    guard let value = dictionary[key] else {
+                        throw RMError.endpointBadRequest("There is no value for that key")
+                    }
                     guard key == .gender,
-                          let value = dictionary[key],
                           let _ = RMCharacterGender(rawValue: value) else {
                               let cases = RMCharacterGender.allCases.reduce("") { partialResult, gender in
                                   return partialResult + "," + gender.rawValue
@@ -45,7 +47,6 @@ enum RMRequest {
                               throw RMError.endpointBadRequest("The value for gender must be \(cases)")
                           }
                     guard key == .status,
-                          let value = dictionary[key],
                           let _ = RMCharacterStatus(rawValue: value) else {
                               let cases = RMCharacterStatus.allCases.reduce("") { partialResult, status in
                                   return partialResult + "," + status.rawValue
@@ -53,7 +54,6 @@ enum RMRequest {
                               throw RMError.endpointBadRequest("The value for status must be \(cases)")
                           }
                     guard (key == .name || key == .type || key == .species),
-                          let value = dictionary[key],
                           !value.isEmpty else {
                               throw RMError.endpointBadRequest("The \(key.rawValue) must not be empty")
                           }
