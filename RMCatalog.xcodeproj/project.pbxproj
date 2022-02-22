@@ -12,7 +12,6 @@
 		322A56B627C32A720005E68A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322A56B427C32A720005E68A /* Main.storyboard */; };
 		322A56B827C32A730005E68A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322A56B727C32A730005E68A /* Assets.xcassets */; };
 		322A56BB27C32A730005E68A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322A56B927C32A730005E68A /* LaunchScreen.storyboard */; };
-		3265EBC127C48B6A00ED120F /* RMCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3265EBC027C48B6A00ED120F /* RMCatalogTests.swift */; };
 		861D459D27C4834B0008C7E9 /* RMCharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459627C4834B0008C7E9 /* RMCharacterStatus.swift */; };
 		861D459E27C4834B0008C7E9 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459727C4834B0008C7E9 /* RMRequest.swift */; };
 		861D459F27C4834B0008C7E9 /* RMCharacterFilterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459827C4834B0008C7E9 /* RMCharacterFilterKey.swift */; };
@@ -20,6 +19,7 @@
 		861D45A127C4834B0008C7E9 /* RMCharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459A27C4834B0008C7E9 /* RMCharacterResult.swift */; };
 		861D45A227C4834B0008C7E9 /* RMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459B27C4834B0008C7E9 /* RMError.swift */; };
 		861D45A327C4834B0008C7E9 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459C27C4834B0008C7E9 /* RMCharacter.swift */; };
+		861D45A527C48D5E0008C7E9 /* RMRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D45A427C48D5E0008C7E9 /* RMRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		322A56BA27C32A730005E68A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		322A56BC27C32A730005E68A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3265EBBE27C48B6A00ED120F /* RMCatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMCatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3265EBC027C48B6A00ED120F /* RMCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCatalogTests.swift; sourceTree = "<group>"; };
 		3265EBC227C48B6A00ED120F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		861D459627C4834B0008C7E9 /* RMCharacterStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacterStatus.swift; sourceTree = "<group>"; };
 		861D459727C4834B0008C7E9 /* RMRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRequest.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		861D459A27C4834B0008C7E9 /* RMCharacterResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacterResult.swift; sourceTree = "<group>"; };
 		861D459B27C4834B0008C7E9 /* RMError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMError.swift; sourceTree = "<group>"; };
 		861D459C27C4834B0008C7E9 /* RMCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
+		861D45A427C48D5E0008C7E9 /* RMRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		3265EBBF27C48B6A00ED120F /* RMCatalogTests */ = {
 			isa = PBXGroup;
 			children = (
-				3265EBC027C48B6A00ED120F /* RMCatalogTests.swift */,
+				861D45A427C48D5E0008C7E9 /* RMRequestTests.swift */,
 				3265EBC227C48B6A00ED120F /* Info.plist */,
 			);
 			path = RMCatalogTests;
@@ -178,6 +178,7 @@
 					};
 					3265EBBD27C48B6A00ED120F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = 322A56AC27C32A720005E68A;
 					};
 				};
@@ -242,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3265EBC127C48B6A00ED120F /* RMCatalogTests.swift in Sources */,
+				861D45A527C48D5E0008C7E9 /* RMRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDAD395VQN;
 				INFOPLIST_FILE = RMCatalogTests/Info.plist;
@@ -442,6 +444,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.manto.RMCatalogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMCatalog.app/RMCatalog";
@@ -452,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XDAD395VQN;
 				INFOPLIST_FILE = RMCatalogTests/Info.plist;
