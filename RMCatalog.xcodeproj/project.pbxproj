@@ -12,8 +12,8 @@
 		322A56B627C32A720005E68A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322A56B427C32A720005E68A /* Main.storyboard */; };
 		322A56B827C32A730005E68A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322A56B727C32A730005E68A /* Assets.xcassets */; };
 		322A56BB27C32A730005E68A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322A56B927C32A730005E68A /* LaunchScreen.storyboard */; };
+		3266C12927D9B0C80071CB21 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459727C4834B0008C7E9 /* RMRequest.swift */; };
 		861D459D27C4834B0008C7E9 /* RMCharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459627C4834B0008C7E9 /* RMCharacterStatus.swift */; };
-		861D459E27C4834B0008C7E9 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459727C4834B0008C7E9 /* RMRequest.swift */; };
 		861D459F27C4834B0008C7E9 /* RMCharacterFilterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459827C4834B0008C7E9 /* RMCharacterFilterKey.swift */; };
 		861D45A027C4834B0008C7E9 /* RMCharacterGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459927C4834B0008C7E9 /* RMCharacterGender.swift */; };
 		861D45A127C4834B0008C7E9 /* RMCharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D459A27C4834B0008C7E9 /* RMCharacterResult.swift */; };
@@ -228,11 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				322A56B327C32A720005E68A /* ViewController.swift in Sources */,
+				3266C12927D9B0C80071CB21 /* RMRequest.swift in Sources */,
 				861D45A227C4834B0008C7E9 /* RMError.swift in Sources */,
 				322A56B127C32A720005E68A /* AppDelegate.swift in Sources */,
 				861D459F27C4834B0008C7E9 /* RMCharacterFilterKey.swift in Sources */,
 				861D45A127C4834B0008C7E9 /* RMCharacterResult.swift in Sources */,
-				861D459E27C4834B0008C7E9 /* RMRequest.swift in Sources */,
 				861D45A327C4834B0008C7E9 /* RMCharacter.swift in Sources */,
 				861D459D27C4834B0008C7E9 /* RMCharacterStatus.swift in Sources */,
 				861D45A027C4834B0008C7E9 /* RMCharacterGender.swift in Sources */,
