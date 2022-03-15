@@ -58,7 +58,16 @@ enum RMRequest {
                               throw RMError.endpointBadRequest("The \(key.rawValue) must not be empty")
                           }
                 }
-                return "TODO"
+                var components = URLComponents()
+                
+                let items = dictionary.map { URLQueryItem(name: $0.rawValue, value: $1) }
+                components.queryItems = items
+                
+                guard let query = components.query else {
+                    fatalError("Something weird happend")
+                }
+                
+                return "character/?\(query)"
         }
     }
 }
