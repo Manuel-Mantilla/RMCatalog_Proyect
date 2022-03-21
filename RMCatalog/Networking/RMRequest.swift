@@ -37,7 +37,7 @@ enum RMRequest {
                 }
                 for key in dictionary.keys {
                     guard let value = dictionary[key] else {
-                        throw RMError.endpointBadRequest("There is no value for that key")
+                        fatalError("There is no value for that key")
                     }
                     guard key == .gender,
                           let _ = RMCharacterGender(rawValue: value) else {
@@ -57,6 +57,7 @@ enum RMRequest {
                           !value.isEmpty else {
                               throw RMError.endpointBadRequest("The \(key.rawValue) must not be empty")
                           }
+                    //Falta un return para los Key?
                 }
                 var components = URLComponents()
                 

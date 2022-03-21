@@ -100,9 +100,9 @@ class RMRequestTests: XCTestCase {
         }
     }
     
-    func test_RMRequest_filterCharacterInvalidKey() {
+    func test_RMRequest_filterCharacterInvalidGender() {
         //Given
-        let expectedDictionary = [RMCharacterFilterKey.status: "Not dead"]
+        let expectedDictionary = [RMCharacterFilterKey.gender: "Not dead"]
         let filterCharacterRequest = RMRequest.filterCharactes(expectedDictionary)
         //When
         do {
@@ -113,14 +113,41 @@ class RMRequestTests: XCTestCase {
         }
     }
     
-    func test_RMRequest_filterCharacterGender() {
+    //This should be searching for status error instead of gender error
+    func test_RMRequest_filterCharacterInvalidStatus() {
         //Given
         let expectedDictionary = [RMCharacterFilterKey.status: "Alive"]
         let filterCharacterRequest = RMRequest.filterCharactes(expectedDictionary)
         //When
-        let expectedDomain = try! filterCharacterRequest.endpoint()
-        //Then
-        XCTAssertEqual(expectedDomain, "")
+        do {
+        let _ = try filterCharacterRequest.endpoint()
+        } catch {
+            //Then
+            XCTAssertEqual(error.localizedDescription, "The value for gender must be ,female,male,genderless,unknown")
+        }
     }
     
+    //It does not search that part of the code where Keys name, type and species are
+    func test_RMRequest_moreKeyRequestInvalidStatus() {
+        //Given
+        let expectedDictionary = [RMCharacterFilterKey.name:"", RMCharacterFilterKey.species:"", RMCharacterFilterKey.type:""]
+        let filterCharactersRequest = RMRequest.filterCharactes(expectedDictionary)
+        //When
+        do {
+            let _ = try filterCharactersRequest.endpoint()
+        } catch {
+            //Then
+            XCTAssertEqual(error.localizedDescription, "The value for gender must be ,female,male,genderless,unknown")
+        }
+    }
+    
+    func test_RMRequestFilterCharacterSucced() {
+        //Given
+        let expectedDictionary = [RMCharacterFilterKey.species: "Human"]
+        let filterCharacterRequest = RMRequest.filterCharactes(expectedDictionary)
+        //When
+        let expectedDomain = try! filterCharacterRequest.endpoint()
+        //Then
+        XCTAssertEqual(expectedDomain, "character/\(expectedDomain)")
+    }
 }
